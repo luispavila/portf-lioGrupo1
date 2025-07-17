@@ -1,0 +1,50 @@
+.habilidade-box {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 10px
+  width: 100px;
+  height: 200px;
+
+  /* Para o box se ajustar ao texto */
+  display: flex;             /* Ativa o Flexbox */
+  flex-direction: column;    /* Empilha os itens verticalmente */
+  align-items: center;
+
+  justify-content: space-between;
+
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.habilidade-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.habilidade-box h1 {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 1.5rem; /* Tamanho da fonte */
+  margin: 0;
+
+  /* Garante que o texto fique centralizado se quebrar em duas linhas */
+  text-align: center;
+}
+
+/* Classe para o container que vai centralizar o box */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo-image {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+}
