@@ -13,6 +13,8 @@ import cLogo from './assets/c.svg';
 import c__Logo from './assets/c--.svg';
 import postgresLogo from './assets/postgresql.svg';
 import githubLogo from './assets/github.svg';
+import unityLogo from './assets/unity.svg';
+import unrealLogo from './assets/unreal.svg';
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
               <Habilidade nome="Figma" logo={figmaLogo} link="https://www.figma.com/pt-br/" />
               <Habilidade nome="Python" logo={pythonLogo} link="https://www.python.org/" />
               <Habilidade nome='PostgreSQL' logo={postgresLogo} link="https://www.postgresql.org/" />
+              <Habilidade nome='Unity' logo={unityLogo} link="https://unity.com/pt" />
           </div>
           <div className="container">
               <Habilidade nome="JavaScript" logo={javascriptLogo} link="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" />
@@ -33,6 +36,7 @@ function App() {
               <Habilidade nome="C++" logo={cLogo} link="https://learn.microsoft.com/pt-br/cpp/cpp/?view=msvc-170" />
               <Habilidade nome="C#" logo={c__Logo} link="https://learn.microsoft.com/pt-br/dotnet/csharp/" />
               <Habilidade nome="GitHub" logo={githubLogo} link="https://github.com/" />
+              <Habilidade nome='Unreal Engine' logo={unrealLogo} link='https://www.unrealengine.com/pt-BR' />
           </div>
       </>
   );
