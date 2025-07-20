@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <Link to="/" className="text-2xl font-bold text-blue-600">
-              Portfolio
+              Toninho DevPlay
             </Link>
             
             <div className="flex space-x-6">
@@ -68,7 +68,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2025 Portfolio Grupo 1. Todos os direitos reservados.</p>
+          <p>&copy; 2025 Toninho DevPlay. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

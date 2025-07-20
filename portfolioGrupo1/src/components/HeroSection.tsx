@@ -9,21 +9,21 @@ export const HeroSection = () => {
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in text-gray-900"> Olá, somos o</span>
+            <span className="opacity-0 animate-fade-in text-gray-900"> Olá, sou o</span>
             <span className="text-blue-600 opacity-0 animate-fade-in delay-200">
               {" "}
-              Portfolio
+              
             </span>
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-2 opacity-0 animate-fade-in delay-300">
               {" "}
-              Grupo 1
+              Toninho DevPlay
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto opacity-0 animate-fade-in delay-500">
-            Criamos experiências web estelares com tecnologias modernas.
-            Especializados em desenvolvimento front-end, construímos interfaces 
-            que são belas e funcionais.
+            Neste portfólio você vai encontrar jogos autorais, projetos experimentais, e protótipos malucos criados com muito café,
+            inspiração em jogos retrô e uma pitada de genialidade caótica. Aqui, cada projeto é um portal — e cada portal é uma nova
+            aventura.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in delay-700">
@@ -31,7 +31,7 @@ export const HeroSection = () => {
               href="#projects" 
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Ver Nossos Projetos
+              Meus Projetos
             </a>
           </div>
         </div>
