@@ -79,22 +79,31 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Projeto {item}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Descrição do projeto desenvolvido com tecnologias modernas.
-                  </p>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
-                    Ver Mais
-                  </button>
-                </div>
+            {/* Botões dos projetos levam para as páginas dos jogos retro */}
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-5xl text-white">🐍</div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Projeto 1: Jogo da Cobrinha</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Clássico Snake Game feito em React.</p>
+                <a href="/snake" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Jogar</a>
               </div>
-            ))}
+            </div>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-5xl text-white">❌⭕</div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Projeto 2: Jogo da Velha</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Jogo da Velha interativo para dois jogadores.</p>
+                <a href="/tictactoe" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Jogar</a>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-yellow-400 to-pink-500 flex items-center justify-center text-5xl text-white">🏓</div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Projeto 3: Ping Pong</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Jogo de Ping Pong simples para um jogador.</p>
+                <a href="/pingpong" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Jogar</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
