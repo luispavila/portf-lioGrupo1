@@ -1,1 +1,14 @@
-.venv
+# Ambientes Virtuais
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Dados do Docker
+postgres_data/
+
+# Arquivos de IDE (Opcional, mas recomendado)
+.vscode/
+.idea/
