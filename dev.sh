@@ -1,13 +1,11 @@
 #!/bin/bash
 
-# Este script orquestra todo o ambiente de desenvolvimento.
+# Script unificado para iniciar todo o ambiente de desenvolvimento.
 # 1. Sobe o banco de dados com Docker Compose.
 # 2. Semeia o banco com dados iniciais.
-# 3. Inicia o servidor da API em segundo plano.
-# 4. Inicia o servidor do Frontend em primeiro plano.
-# Deve ser executado a partir da pasta raiz do projeto.
+# 3. Inicia os servidores da API (backend) e da UI (frontend) em paralelo.
 
-# Etapa 1: Iniciar o banco de dados com Docker Compose
+# Etapa 1: Iniciar o banco de dados
 echo "🚀 Etapa 1: Iniciando o banco de dados com Docker Compose..."
 docker compose up -d
 
@@ -16,14 +14,12 @@ echo "⏳ Aguardando 5 segundos para o banco de dados iniciar completamente..."
 sleep 5
 
 # Etapa 3: Semear o banco de dados
-echo "🌱 Etapa 3: Semeando o banco de dados com jogos e comentários..."
+echo "🌱 Etapa 3: Semeando o banco de dados com dados iniciais..."
 poetry run python scripts/seed.py
 
-# Etapa 4: Iniciar o servidor FastAPI em SEGUNDO PLANO
-echo "🐍 Etapa 4: Iniciando o servidor FastAPI em background em http://localhost:8000"
-poetry run uvicorn backend.app.main:app --host 0.0.0.0 --reload --reload-exclude ./postgres_data/ &
+# Etapa 4: Iniciar os servidores de Backend e Frontend em paralelo
+echo "🚀 Etapa 4: Iniciando servidores Backend e Frontend com concurrently..."
 
-# Etapa 5: Iniciar o servidor do Frontend em PRIMEIRO PLANO
-echo "🎨 Etapa 5: Iniciando o servidor do Frontend (React)..."
-# Entra na pasta do frontend e inicia o servidor de desenvolvimento
-cd frontend && npm run dev
+# O concurrently irá rodar os dois comandos ao mesmo tempo e mostrar a saída de ambos.
+# Pressionar Ctrl+C irá encerrar os dois processos de forma limpa.
+npx concurrently "poetry run uvicorn backend.app.main:app --host 0.0.0.0 --reload --reload-exclude ./postgres_data/" "npm run dev"

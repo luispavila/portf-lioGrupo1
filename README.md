@@ -1,35 +1,58 @@
-# API do Portfólio de Jogos (Grupo 1)
+# Portfólio de Jogos - API & Interface
 
-Este repositório contém o backend para uma aplicação de portfólio de jogos. A API é construída com FastAPI e gerencia jogos e comentários, utilizando um banco de dados PostgreSQL orquestrado com Docker.
+Este é um projeto full-stack que apresenta um portfólio de mini-jogos interativos. O backend é construído com FastAPI e o frontend com React, com um sistema de comentários para cada jogo.
 
-## 🚀 Funcionalidades
+## ✨ Funcionalidades
 
-- **Gerenciamento de Jogos**: Endpoints para criar e listar jogos.
-- **Sistema de Comentários**: Endpoints para criar e listar comentários associados a cada jogo.
-- **Ambiente de Desenvolvimento Unificado**: Com um único script, todo o ambiente (banco de dados e API) é iniciado e configurado.
-- **Banco de Dados Semeado**: O script de desenvolvimento popula o banco com dados iniciais (3 jogos e 12 comentários) para facilitar testes e demonstrações.
+- **Backend Robusto**: API RESTful para gerenciar jogos e comentários.
+- **Frontend Interativo**: Interface reativa construída com React e Vite, estilizada com Tailwind CSS.
+- **Jogos Clássicos**: Inclui implementações de Jogo da Cobrinha, Jogo da Velha e Ping Pong.
+- **Banco de Dados Persistente**: Utiliza PostgreSQL orquestrado com Docker para armazenamento de dados.
+- **Setup Simplificado**: Ambiente de desenvolvimento completo iniciado com um único script.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Backend**: Python 3.11+
+#### Backend
 - **Framework**: FastAPI
+- **Linguagem**: Python 3.11+
 - **Gerenciador de Dependências**: Poetry
-- **Servidor ASGI**: Uvicorn
 - **Banco de Dados**: PostgreSQL
 - **ORM**: SQLAlchemy
-- **Validação de Dados**: Pydantic
 - **Containerização**: Docker e Docker Compose
+
+#### Frontend
+- **Framework**: React (com TypeScript e Vite)
+- **Estilização**: Tailwind CSS
+- **Gerenciador de Pacotes**: npm
+
+## 📂 Estrutura do Projeto
+
+O projeto segue uma estrutura de monorepo, com o frontend e o backend separados em diretórios distintos na raiz.
+
+/
+├── backend/            # Todo o código da API FastAPI
+├── src/                # Todo o código do frontend React
+├── scripts/            # Scripts auxiliares (ex: seed.py)
+├── postgres_data/      # (Ignorado) Dados do banco de dados Docker
+├── .venv/              # (Ignorado) Ambiente virtual do Python (Poetry)
+├── node_modules/       # (Ignorado) Dependências do Node.js
+├── dev.sh              # Script principal para iniciar o ambiente de dev
+├── docker-compose.yml  # Configuração do serviço PostgreSQL
+├── package.json        # Dependências e scripts do frontend
+├── pyproject.toml      # Dependências e configuração do backend (Poetry)
+└── README.md           # Este arquivo
+
 
 ## ⚙️ Rodando o Projeto Localmente
 
-Siga os passos abaixo para configurar e executar o ambiente de desenvolvimento na sua máquina.
+Siga os passos abaixo para configurar e executar o ambiente de desenvolvimento completo na sua máquina.
 
 #### Pré-requisitos
-
 Antes de começar, garanta que você tenha as seguintes ferramentas instaladas:
 * [Git](https://git-scm.com/)
 * [Docker](https://www.docker.com/products/docker-desktop/) e Docker Compose
 * [Poetry](https://python-poetry.org/docs/#installation)
+* [Node.js (LTS)](https://nodejs.org/en) (que inclui o `npm`)
 
 #### Passos de Instalação
 
@@ -39,114 +62,31 @@ Antes de começar, garanta que você tenha as seguintes ferramentas instaladas:
     cd portf-lioGrupo1
     ```
 
-2.  **Instale as dependências Python com Poetry:**
-    Este comando irá criar um ambiente virtual (`.venv`) e instalar todas as bibliotecas necessárias listadas no arquivo `poetry.lock`.
+2.  **Instale as dependências do Backend (Python):**
+    O Poetry criará um ambiente virtual e instalará tudo o que a API precisa.
     ```bash
     poetry install
     ```
 
-3.  **Torne o script de desenvolvimento executável:**
-    Você só precisa fazer isso uma vez.
+3.  **Instale as dependências do Frontend (JavaScript):**
+    O npm irá baixar todas as bibliotecas do React e outras ferramentas.
     ```bash
-    chmod +x /dev.sh
+    npm install
     ```
 
-4.  **Execute o script "mágico" de desenvolvimento:**
-    Este é o único comando que você precisará usar para iniciar todo o ambiente.
+4.  **Torne o script de desenvolvimento executável (só precisa fazer isso uma vez):**
+    ```bash
+    chmod +x dev.sh
+    ```
+
+5.  **Execute o script de desenvolvimento unificado:**
+    Este é o único comando que você precisará para rodar tudo.
     ```bash
     ./dev.sh
     ```
 
-E pronto! O script fará o seguinte automaticamente:
-* Iniciará o contêiner do PostgreSQL com Docker Compose.
-* Aguardará 5 segundos para o banco de dados ficar pronto.
-* Executará o script `seed.py` para popular o banco com jogos e comentários.
-* Iniciará o servidor da API com auto-reload em `http://localhost:8000`.
+E pronto! O script iniciará o banco de dados, o populará com dados e subirá os servidores de backend e frontend simultaneamente.
 
-Você pode acessar a documentação interativa da API em **[http://localhost:8000/docs](http://localhost:8000/docs)**.
-
-## 📖 Endpoints da API
-
-A API expõe os seguintes endpoints principais:
-
-#### Games
-* `GET /games/`: Lista todos os jogos no banco de dados.
-* `POST /games/`: Cria um novo jogo.
-    * **Corpo da requisição**: `{"title": "Nome do Jogo"}`
-
-#### Comments
-* `GET /games/{game_id}/comments/`: Lista todos os comentários para um jogo específico.
-* `POST /games/{game_id}/comments/`: Adiciona um novo comentário a um jogo específico.
-    * **Corpo da requisição**: `{"author_name": "Nome do Autor", "content": "Seu comentário aqui"}`
-
----
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   🔗 A API estará acessível em **[http://localhost:8000](http://localhost:8000)**
+-   📖 A documentação da API estará em **[http://localhost:8000/docs](http://localhost:8000/docs)**
+-   🖥️ O site do portfólio estará acessível em **[http://localhost:5173](http://localhost:5173)** (ou a porta indicada no seu terminal)
