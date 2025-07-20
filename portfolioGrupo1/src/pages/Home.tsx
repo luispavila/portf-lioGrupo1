@@ -95,7 +95,7 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card SnakeGame */}
+            {/* Card Cobrinha */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="w-full flex items-center justify-center" style={{ minHeight: '28rem', height: '28rem' }}>
                 {!snakeActive ? (
@@ -115,8 +115,16 @@ const Home = () => {
                   <button onClick={() => setSnakeActive(false)} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Fechar</button>
                 )}
               </div>
+            {/* Comentários Jogo da Cobrinha */}
+            <div className="w-full mt-4">
+              <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Jogo da Cobrinha.</p>
+                {/* Inserir o sistema de comentários aqui! */}
+              </div>
             </div>
-            {/* Card TicTacToe */}
+          </div>
+            {/* Card Velha */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="w-full flex items-center justify-center" style={{ minHeight: '28rem', height: '28rem' }}>
                 {!tictactoeActive ? (
@@ -136,7 +144,15 @@ const Home = () => {
                   <button onClick={() => setTicTacToeActive(false)} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Fechar</button>
                 )}
               </div>
+            {/* Comentários Velha */}
+            <div className="w-full mt-4">
+              <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Jogo da Velha.</p>
+                {/* Inserir o sistema de comentários aqui! */}
+              </div>
             </div>
+          </div>
             {/* Card PingPong */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="w-full flex items-center justify-center" style={{ minHeight: '28rem', height: '28rem' }}>
@@ -157,16 +173,17 @@ const Home = () => {
                   <button onClick={() => setPingPongActive(false)} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Fechar</button>
                 )}
               </div>
+            {/* Comentários PingPong */}
+            <div className="w-full mt-4">
+              <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Ping Pong.</p>
+                {/* Inserir o sistema de comentários aqui! */}
+              </div>
             </div>
           </div>
-      {/* Área de comentários para outro desenvolvedor */}
-      <div className="container mx-auto px-4 my-8">
-        <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-8 flex flex-col items-center">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Comentários</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-2 text-center">Área reservada para comentários dos usuários ou desenvolvedores.</p>
-          {/* O outro dev pode inserir o sistema de comentários aqui! */}
-        </div>
-      </div>
+          </div>
+          
         </div>
       </section>
 
