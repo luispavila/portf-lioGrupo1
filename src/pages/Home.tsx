@@ -43,11 +43,16 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Sobre Nós
+              Sobre Mim
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Somos um grupo de desenvolvedores apaixonados por criar soluções web inovadoras
-              e funcionais. Nossa missão é transformar ideias em realidade digital.
+              Olá! Meu nome é Toninho DevPlay e sou apaixonado por mundos que não existem... ainda!
+              Desde pequeno, transformo papel e lápis em labirintos, monstros e aventuras. Hoje, como desenvolvedor de jogos,
+              uso linhas de código para dar vida a essas ideias — criando experiências imersivas que misturam diversão, desafio e um toque
+              de loucura criativa.
+
+              Adoro pixel art, narrativas envolventes e mecânicas que surpreendem. Se o jogo for estranho, engraçado
+              ou cheio de segredos, provavelmente fui eu que fiz. 😄
             </p>
           </div>
         </div>
@@ -57,7 +62,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Nossas Habilidades
+              Minhas Habilidades
             </h2>
           </div>
           <div className="container">
@@ -83,14 +88,14 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Nossos Projetos
+              Meus Projetos
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              Alguns dos nossos trabalhos mais recentes
+              Alguns dos meus trabalhos mais recentes
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card SnakeGame */}
+            {/* Card Cobrinha */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="w-full flex items-center justify-center" style={{ minHeight: '28rem', height: '28rem' }}>
                 {!snakeActive ? (
@@ -110,8 +115,16 @@ const Home = () => {
                   <button onClick={() => setSnakeActive(false)} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Fechar</button>
                 )}
               </div>
+            {/* Comentários Jogo da Cobrinha */}
+            <div className="w-full mt-4">
+              <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Jogo da Cobrinha.</p>
+                {/* Inserir o sistema de comentários aqui! */}
+              </div>
             </div>
-            {/* Card TicTacToe */}
+          </div>
+            {/* Card Velha */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="w-full flex items-center justify-center" style={{ minHeight: '28rem', height: '28rem' }}>
                 {!tictactoeActive ? (
@@ -131,7 +144,15 @@ const Home = () => {
                   <button onClick={() => setTicTacToeActive(false)} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Fechar</button>
                 )}
               </div>
+            {/* Comentários Velha */}
+            <div className="w-full mt-4">
+              <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Jogo da Velha.</p>
+                {/* Inserir o sistema de comentários aqui! */}
+              </div>
             </div>
+          </div>
             {/* Card PingPong */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <div className="w-full flex items-center justify-center" style={{ minHeight: '28rem', height: '28rem' }}>
@@ -152,8 +173,17 @@ const Home = () => {
                   <button onClick={() => setPingPongActive(false)} className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors block text-center">Fechar</button>
                 )}
               </div>
+            {/* Comentários PingPong */}
+            <div className="w-full mt-4">
+              <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Ping Pong.</p>
+                {/* Inserir o sistema de comentários aqui! */}
+              </div>
             </div>
           </div>
+          </div>
+          
         </div>
       </section>
 
@@ -165,10 +195,12 @@ const Home = () => {
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
               Pronto para transformar sua ideia em realidade? 
-              Entre em contato conosco e vamos conversar sobre seu próximo projeto.
+              Entre em contato comigo e vamos conversar sobre seu próximo projeto!
             </p>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors transform hover:scale-105">
-              Fale Conosco
+              <a href="https://api.whatsapp.com/" target="_blank" rel="noopener noreferrer" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors transform hover:scale-105 inline-block text-center">
+                Fale Comigo
+              </a>
             </button>
           </div>
         </div>

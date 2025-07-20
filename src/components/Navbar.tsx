@@ -9,10 +9,10 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Sobre", href: "#about" },
+  { name: "Habilidades", href: "#skills" },
+  { name: "Projetos", href: "#projects" },
+  { name: "Contacto", href: "#contact" },
 ];
 
 export const Navbar = () => {
@@ -41,8 +41,7 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-blue-600"> Portfolio </span>{" "}
-            Grupo 1
+            <span className="text-blue-600"> Toninho DevPlay </span>
           </span>
         </a>
 
