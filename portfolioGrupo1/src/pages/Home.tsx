@@ -1,6 +1,21 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import Habilidade from "@/components/Habilidade";
+import "@/components/habilidade.css";
+
+import reactLogo from "@/assets/react.svg";
+import fastapiLogo from "@/assets/fastapi.svg";
+import figmaLogo from "@/assets/figma.svg";
+import pythonLogo from "@/assets/python.svg";
+import postgresLogo from "@/assets/postgresql.svg";
+import unityLogo from "@/assets/unity.svg";
+import javascriptLogo from "@/assets/javascript.svg";
+import openglLogo from "@/assets/opengl.svg";
+import cLogo from "@/assets/c.svg";
+import c__Logo from "@/assets/c--.svg";
+import githubLogo from "@/assets/github.svg";
+import unrealLogo from "@/assets/unreal.svg";
 
 const Home = () => {
   return (
@@ -36,34 +51,21 @@ const Home = () => {
               Nossas Habilidades
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚛️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">React</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Desenvolvimento de interfaces modernas e reativas
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💚</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Node.js</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Backend robusto e APIs escaláveis
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎨</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Design</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                UI/UX intuitivo e responsivo
-              </p>
-            </div>
+          <div className="container">
+            <Habilidade nome="React" logo={reactLogo} link="https://react.dev" />
+            <Habilidade nome="FastAPI" logo={fastapiLogo} link="https://fastapi.tiangolo.com/" />
+            <Habilidade nome="Figma" logo={figmaLogo} link="https://www.figma.com/pt-br/" />
+            <Habilidade nome="Python" logo={pythonLogo} link="https://www.python.org/" />
+            <Habilidade nome='PostgreSQL' logo={postgresLogo} link="https://www.postgresql.org/" />
+            <Habilidade nome='Unity' logo={unityLogo} link="https://unity.com/pt" />
+          </div>
+          <div className="container">
+            <Habilidade nome="JavaScript" logo={javascriptLogo} link="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" />
+            <Habilidade nome="OpenGL" logo={openglLogo}  link="https://www.opengl.org/" />
+            <Habilidade nome="C++" logo={cLogo} link="https://learn.microsoft.com/pt-br/cpp/cpp/?view=msvc-170" />
+            <Habilidade nome="C#" logo={c__Logo} link="https://learn.microsoft.com/pt-br/dotnet/csharp/" />
+            <Habilidade nome="GitHub" logo={githubLogo} link="https://github.com/" />
+            <Habilidade nome='Unreal Engine' logo={unrealLogo} link='https://www.unrealengine.com/pt-BR' />
           </div>
         </div>
       </section>
