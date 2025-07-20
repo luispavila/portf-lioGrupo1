@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-const gridSize = 20;
+const gridSize = 15;
 const tileSize = 20;
 const initialSnake = [{ x: 8, y: 8 }];
 const initialDirection = { x: 1, y: 0 };
@@ -26,12 +26,15 @@ export default function SnakeGame() {
 
   useEffect(() => {
     const handleKey = (e) => {
+      if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+        e.preventDefault();
+      }
       if (e.key === 'ArrowUp' && direction.y !== 1) setDirection({ x: 0, y: -1 });
       if (e.key === 'ArrowDown' && direction.y !== -1) setDirection({ x: 0, y: 1 });
       if (e.key === 'ArrowLeft' && direction.x !== 1) setDirection({ x: -1, y: 0 });
       if (e.key === 'ArrowRight' && direction.x !== -1) setDirection({ x: 1, y: 0 });
     };
-    window.addEventListener('keydown', handleKey);
+    window.addEventListener('keydown', handleKey, { passive: false });
     return () => window.removeEventListener('keydown', handleKey);
   }, [direction]);
 

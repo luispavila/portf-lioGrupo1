@@ -16,10 +16,13 @@ export default function PingPong() {
 
   useEffect(() => {
     const handleKey = (e) => {
+      if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+        e.preventDefault();
+      }
       if (e.key === 'ArrowUp') setPaddleY((y) => Math.max(0, y - 20));
       if (e.key === 'ArrowDown') setPaddleY((y) => Math.min(height - paddleHeight, y + 20));
     };
-    window.addEventListener('keydown', handleKey);
+    window.addEventListener('keydown', handleKey, { passive: false });
     return () => window.removeEventListener('keydown', handleKey);
   }, []);
 
