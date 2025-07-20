@@ -24,10 +24,17 @@ class Comment(CommentBase):
 # Esquema para Jogos
 
 # Esquema para a criação de jogos
-class Game(BaseModel):
-    id: int
+class GameBase(BaseModel):
     title: str
-    comments: list[Comment] | None = []
+
+class GameCreate(GameBase):
+    pass
+
+class Game(GameBase):
+    id: int
 
     class Config:
-        from_attributes = True # Antigamente orm_mode = True
+        from_attributes = True
+
+class GameWithComments(Game):
+    comments: list[Comment] = []
