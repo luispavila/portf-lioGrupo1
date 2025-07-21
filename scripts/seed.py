@@ -14,7 +14,7 @@ from backend.app.models import Game, Comment
 
 # --- Configuração do Banco de Dados ---
 # Use a mesma URL de conexão do seu arquivo database.py
-SQLALCHEMY_DATABASE_URL = "postgresql://portfolio_user:supersecretpassword@localhost/portfolio_db"
+SQLALCHEMY_DATABASE_URL = "postgresql://portfolio_user:supersecretpassword@localhost:5433/portfolio_db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -37,9 +37,9 @@ def seed_database():
         # --- Criação dos Jogos ---
         print("Criando os jogos...")
         
-        jogo_cobrinha = Game(title="Jogo da Cobrinha")
-        jogo_da_velha = Game(title="Jogo da Velha")
-        ping_pong = Game(title="Ping Pong")
+        jogo_cobrinha = Game(id=1, title="Jogo da Cobrinha")
+        jogo_da_velha = Game(id=2, title="Jogo da Velha")
+        ping_pong = Game(id=3, title="Ping Pong")
         
         db.add_all([jogo_cobrinha, jogo_da_velha, ping_pong])
         db.commit()

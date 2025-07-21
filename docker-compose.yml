@@ -10,5 +10,5 @@ services:
       - POSTGRES_PASSWORD=supersecretpassword
       - POSTGRES_DB=portfolio_db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     restart: always

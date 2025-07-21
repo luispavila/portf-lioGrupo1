@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Coneção com o banco de dados
-SQLALCHEMY_DATABASE_URL = "postgresql://portfolio_user:supersecretpassword@localhost/portfolio_db"
+SQLALCHEMY_DATABASE_URL = "postgresql://portfolio_user:supersecretpassword@localhost:5433/portfolio_db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
