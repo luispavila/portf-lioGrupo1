@@ -71,13 +71,12 @@ Antes de começar, garanta que você tenha as seguintes ferramentas instaladas:
 3.  **Instale as dependências do Frontend (JavaScript):**
     O npm irá baixar todas as bibliotecas do React e outras ferramentas.
     ```bash
-    cd frontend/src 
+    cd frontend
     npm install
     ```
 
 4.  **Torne o script de desenvolvimento executável (só precisa fazer isso uma vez):**
     ```bash
-    cd ..
     cd ..
     chmod +x dev.sh
     ```
