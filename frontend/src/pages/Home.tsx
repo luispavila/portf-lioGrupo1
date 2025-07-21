@@ -132,8 +132,8 @@ const Home = () => {
             <div className="w-full mt-4">
               <div className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md p-4 flex flex-col items-center">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Jogo da Cobrinha.</p>
                 {/* Inserir o sistema de comentários aqui! */}
+                <Comments gameId={1} />
               </div>
             </div>
           </div>
@@ -163,6 +163,7 @@ const Home = () => {
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Jogo da Velha.</p>
                 {/* Inserir o sistema de comentários aqui! */}
+                <Comments gameId={2} />
               </div>
             </div>
           </div>
@@ -192,6 +193,7 @@ const Home = () => {
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">Comentários</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-1 text-center">Área reservada para comentários do Ping Pong.</p>
                 {/* Inserir o sistema de comentários aqui! */}
+                <Comments gameId={3} />
               </div>
             </div>
           </div>
