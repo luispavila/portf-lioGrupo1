@@ -22,4 +22,4 @@ echo "🚀 Etapa 4: Iniciando servidores Backend e Frontend com concurrently..."
 
 # O concurrently irá rodar os dois comandos ao mesmo tempo e mostrar a saída de ambos.
 # Pressionar Ctrl+C irá encerrar os dois processos de forma limpa.
-npx concurrently "poetry run uvicorn backend.app.main:app --host 0.0.0.0 --reload --reload-exclude ./postgres_data/" "cd frontend && npm run dev"
+npx concurrently "poetry run uvicorn backend.app.main:app --host 0.0.0.0" "cd frontend && npm run dev"
